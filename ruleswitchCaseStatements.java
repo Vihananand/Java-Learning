@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class ruleswitchCaseStatements {
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int c = sc.nextInt();
@@ -13,5 +14,6 @@ public class ruleswitchCaseStatements {
             case 5 -> System.out.println("5");
             default -> System.out.println("Invalid Input!!");
         }
+        sc.close();
     }
 }
