@@ -1,4 +1,3 @@
-package Concepts;
 public class variables {
     public static void main(String[] args) {
         //variables

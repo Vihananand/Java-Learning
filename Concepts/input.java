@@ -1,4 +1,3 @@
-package Concepts;
 import java.util.Scanner;
 
 public class input {
