@@ -10,5 +10,6 @@ public class whileLoop {
             System.out.print(i + " ");
             i++;
         }
+        sc.close();
     }
 }
