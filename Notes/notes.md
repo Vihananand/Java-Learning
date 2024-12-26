@@ -33,5 +33,6 @@
 |                            | ```                                              |
 
 ## Key Takeaways
+
 1. Use `do-while` when the code must execute at least once before checking the condition.
 2. Use `while` when the condition determines whether the loop executes at all.
