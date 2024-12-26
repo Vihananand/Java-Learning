@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class doWhile {
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int times = sc.nextInt();
@@ -9,5 +10,6 @@ public class doWhile {
             System.out.print(i + " ");
             i++;
         } while (i <= times);
+        sc.close();
     }
 }
