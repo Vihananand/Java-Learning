@@ -1,3 +1,7 @@
+/*
+ 1. This is hierarchial type of inheritence.
+ 2. In this type of inheritence there are multiple classes that derive the property of one basee class
+ */
 class Shape{
     int area;
 }

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Modifiers in Java</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      code {
+        color: white;
+        background-color: #2e2e2e;
+        padding: 5px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      pre {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Access Modifiers in Java</h1>
+    <p>
+      In Java, there are four types of access modifiers, which control the
+      visibility of classes, methods, and variables. Here’s a detailed
+      explanation of each:
+    </p>
+
+    <h2>1. Default (Package-Private) Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong> Accessible only within the same package. It is the
+      default access level if no access modifier is explicitly specified.
+    </p>
+    <p>
+      <strong>Usage:</strong> Suitable for classes and members meant to be
+      shared only within the package.
+    </p>
+    <pre><code>class DefaultClass { // No modifier means 'default'
+    void display() {
+        System.out.println("Default Access Modifier");
+    }
+}</code></pre>
+    
+    <h2>2. Public Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong> Accessible from anywhere, both within the same
+      package and outside the package.
+    </p>
+    <p>
+      <strong>Usage:</strong> Typically used for classes, methods, and variables
+      that need to be accessed widely.
+    </p>
+    <pre><code>public class PublicClass {
+    public void display() {
+        System.out.println("Public Access Modifier");
+    }
+}</code></pre>
+
+    <h2>3. Private Access Modifier</h2>
+    <p><strong>Scope:</strong> Accessible only within the same class.</p>
+    <p>
+      <strong>Usage:</strong> Often used for data encapsulation, hiding the
+      internal details of a class.
+    </p>
+    <p>
+      <strong>Note:</strong> To allow controlled access to private members,
+      getters and setters are often used. These methods provide a way to read or
+      update private fields while maintaining control over how the fields are
+      accessed or modified.
+    </p>
+    <pre><code>class PrivateClass {
+    private int value;
+
+    // Getter method
+    public int getValue() {
+        return value;
+    }
+
+    // Setter method
+    public void setValue(int value) {
+        if (value > 0) { // Validation logic can be added
+            this.value = value;
+        }
+    }
+
+    private void display() {
+        System.out.println("Private Access Modifier");
+    }
+
+    public void show() {
+        display(); // Accessible within the same class
+    }
+}</code></pre>
+    
+    <h2>4. Protected Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong> Accessible within the same package and by
+      subclasses in different packages.
+    </p>
+    <p>
+      <strong>Usage:</strong> Useful for inheritance, as it allows child classes
+      to access parent class members.
+    </p>
+    <pre><code>class Parent {
+    protected void display() {
+        System.out.println("Protected Access Modifier");
+    }
+}
+
+public class Child extends Parent {
+    public static void main(String[] args) {
+        Child obj = new Child();
+        obj.display(); // Accessible because Child extends Parent
+    }
+}</code></pre>
+    
+    <h2>Full Code Demonstration</h2>
+    <pre><code>// Default access modifier
+class DefaultClass {
+    void display() {
+        System.out.println("Default Access Modifier");
+    }
+}
+
+// Public access modifier
+public class PublicClass {
+    public void display() {
+        System.out.println("Public Access Modifier");
+    }
+}
+
+// Private access modifier
+class PrivateClass {
+    private int value;
+
+    // Getter method
+    public int getValue() {
+        return value;
+    }
+
+    // Setter method
+    public void setValue(int value) {
+        if (value > 0) {
+            this.value = value;
+        }
+    }
+
+    private void display() {
+        System.out.println("Private Access Modifier");
+    }
+
+    public void show() {
+        display(); // Accessed within the same class
+    }
+}
+
+// Protected access modifier
+class Parent {
+    protected void display() {
+        System.out.println("Protected Access Modifier");
+    }
+}
+
+public class AccessModifiersDemo extends Parent {
+    public static void main(String[] args) {
+        // Default access
+        DefaultClass defaultObj = new DefaultClass();
+        defaultObj.display();
+
+        // Public access
+        PublicClass publicObj = new PublicClass();
+        publicObj.display();
+
+        // Private access with getter and setter
+        PrivateClass privateObj = new PrivateClass();
+        privateObj.setValue(10);
+        System.out.println("Value: " + privateObj.getValue());
+        privateObj.show();
+
+        // Protected access
+        AccessModifiersDemo protectedObj = new AccessModifiersDemo();
+        protectedObj.display(); // Accessed due to inheritance
+    }
+}</code></pre>
+    
+    <h2>Output</h2>
+    <pre><code>Default Access Modifier
+Public Access Modifier
+Value: 10
+Private Access Modifier
+Protected Access Modifier</code></pre>
+    
+    <h2>Summary Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Access Modifier</th>
+          <th>Scope</th>
+          <th>Accessible From</th>
+          <th>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>Within the same package</td>
+          <td>Classes, methods, and variables in the same package</td>
+          <td>When no explicit access modifier is needed</td>
+        </tr>
+        <tr>
+          <td>Public</td>
+          <td>Anywhere</td>
+          <td>
+            Classes, methods, and variables globally (within and outside
+            packages)
+          </td>
+          <td>For widely accessible features</td>
+        </tr>
+        <tr>
+          <td>Private</td>
+          <td>Within the same class</td>
+          <td>Only accessible inside the class where they are defined</td>
+          <td>For data encapsulation and hiding</td>
+        </tr>
+        <tr>
+          <td>Protected</td>
+          <td>Same package and subclasses in different packages</td>
+          <td>
+            Accessible in the same package and in subclasses through inheritance
+          </td>
+          <td>For controlled access with inheritance</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

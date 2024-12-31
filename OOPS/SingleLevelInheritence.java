@@ -2,6 +2,7 @@
  1. This is single level inheritence.
  2. In this type of inheritence a class derives the property from the base class
  */
+import bank.bank;
 class Shape{
     public void displayArea(){
         System.out.print("Area is: ");
