@@ -19,5 +19,7 @@ class EquilateralTriangle extends Triangle{
 }
 
 public class MultiLevelInheritence {
-    
+    public static void main(String[] args) {
+        
+    }
 }
