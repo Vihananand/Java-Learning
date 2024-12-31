@@ -1,108 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<title>Access Modifiers in Java</title>
-		<style>
-			body {
-				font-family: Arial, sans-serif;
-				line-height: 1.6;
-				margin: 20px;
-			}
-			code {
-				color: white;
-				background-color: #2e2e2e;
-				padding: 5px;
-				display: block;
-				margin: 10px 0;
-				border-radius: 5px;
-			}
-			table {
-				width: 100%;
-				border-collapse: collapse;
-				margin: 20px 0;
-			}
-			table,
-			th,
-			td {
-				border: 1px solid #ddd;
-			}
-			th,
-			td {
-				padding: 10px;
-				text-align: left;
-			}
-			th {
-				background-color: #f2f2f2;
-			}
-			pre {
-				background-color: #f9f9f9;
-				border: 1px solid #ddd;
-				padding: 10px;
-				overflow: auto;
-			}
-		</style>
-	</head>
-	<body>
-		<h1>Access Modifiers in Java</h1>
-		<p>
-			In Java, there are four types of access modifiers, which control the
-			      visibility of classes, methods, and variables. Here’s a detailed
-			      explanation of each:
-		</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Modifiers in Java</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 20px;
+      }
+      code {
+        color: white;
+        background-color: #2e2e2e;
+        padding: 5px;
+        display: block;
+        margin: 10px 0;
+        border-radius: 5px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #ddd;
+      }
+      th,
+      td {
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      pre {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 10px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Access Modifiers in Java</h1>
+    <p>
+      In Java, there are four types of access modifiers, which control the
+      visibility of classes, methods, and variables. Here’s a detailed
+      explanation of each:
+    </p>
 
-		<h2>1. Default (Package-Private) Access Modifier</h2>
-		<p>
-			<strong>Scope:</strong>
-			Accessible only within the same package. It is the
-			      default access level if no access modifier is explicitly specified.
-		</p>
-		<p>
-			<strong>Usage:</strong>
-			Suitable for classes and members meant to be
-			      shared only within the package.
-		</p>
-		<pre><code>class DefaultClass { // No modifier means 'default'
+    <h2>1. Default (Package-Private) Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong>
+      Accessible only within the same package. It is the default access level if
+      no access modifier is explicitly specified.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Suitable for classes and members meant to be shared only within the
+      package.
+    </p>
+    <pre><code>class DefaultClass { // No modifier means 'default'
     void display() {
         System.out.println("Default Access Modifier");
     }
 }</code></pre>
 
-		<h2>2. Public Access Modifier</h2>
-		<p>
-			<strong>Scope:</strong>
-			Accessible from anywhere, both within the same
-			      package and outside the package.
-		</p>
-		<p>
-			<strong>Usage:</strong>
-			Typically used for classes, methods, and variables
-			      that need to be accessed widely.
-		</p>
-		<pre><code>public class PublicClass {
+    <h2>2. Public Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong>
+      Accessible from anywhere, both within the same package and outside the
+      package.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Typically used for classes, methods, and variables that need to be
+      accessed widely.
+    </p>
+    <pre><code>public class PublicClass {
     public void display() {
         System.out.println("Public Access Modifier");
     }
 }</code></pre>
 
-		<h2>3. Private Access Modifier</h2>
-		<p>
-			<strong>Scope:</strong>
-			Accessible only within the same class.</p>
-		<p>
-			<strong>Usage:</strong>
-			Often used for data encapsulation, hiding the
-			      internal details of a class.
-		</p>
-		<p>
-			<strong>Note:</strong>
-			To allow controlled access to private members,
-			      getters and setters are often used. These methods provide a way to read or
-			      update private fields while maintaining control over how the fields are
-			      accessed or modified.
-		</p>
-		<pre><code>class PrivateClass {
+    <h2>3. Private Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong>
+      Accessible only within the same class.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Often used for data encapsulation, hiding the internal details of a class.
+    </p>
+    <p>
+      <strong>Note:</strong>
+      To allow controlled access to private members, getters and setters are
+      often used. These methods provide a way to read or update private fields
+      while maintaining control over how the fields are accessed or modified.
+    </p>
+    <pre><code>class PrivateClass {
     private int value;
 
     // Getter method
@@ -126,18 +125,18 @@
     }
 }</code></pre>
 
-		<h2>4. Protected Access Modifier</h2>
-		<p>
-			<strong>Scope:</strong>
-			Accessible within the same package and by
-			      subclasses in different packages.
-		</p>
-		<p>
-			<strong>Usage:</strong>
-			Useful for inheritance, as it allows child classes
-			      to access parent class members.
-		</p>
-		<pre><code>class Parent {
+    <h2>4. Protected Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong>
+      Accessible within the same package and by subclasses in different
+      packages.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Useful for inheritance, as it allows child classes to access parent class
+      members.
+    </p>
+    <pre><code>class Parent {
     protected void display() {
         System.out.println("Protected Access Modifier");
     }
@@ -150,19 +149,21 @@ public class Child extends Parent {
     }
 }</code></pre>
 
-		<h2>5. Abstract Access Modifier</h2>
-		<p>
-			<strong>Scope:</strong>
-			The abstract keyword is used to define a class that
-			      cannot be instantiated directly and is intended to be subclassed. An abstract class can have abstract methods
-			      (without implementation) that must be implemented by its subclasses.
-		</p>
-		<p>
-			<strong>Usage:</strong>
-			Abstract classes are used when there are some methods that must be implemented by
-			      the subclasses, but some shared functionality can be implemented in the abstract class itself.
-		</p>
-		<pre><code>abstract class AbstractClass {
+    <h2>5. Abstract Access Modifier</h2>
+    <p>
+      <strong>Scope:</strong>
+      The abstract keyword is used to define a class that cannot be instantiated
+      directly and is intended to be subclassed. An abstract class can have
+      abstract methods (without implementation) that must be implemented by its
+      subclasses.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Abstract classes are used when there are some methods that must be
+      implemented by the subclasses, but some shared functionality can be
+      implemented in the abstract class itself.
+    </p>
+    <pre><code>abstract class AbstractClass {
     abstract void display(); // Abstract method
 
     public void show() {
@@ -185,8 +186,45 @@ public class AbstractDemo {
     }
 }</code></pre>
 
-		<h2>Full Code Demonstration</h2>
-		<pre><code>// Default access modifier
+    <h2>6. Interface in Java</h2>
+    <p>
+      <strong>Scope:</strong>
+      An interface is a reference type in Java, similar to a class, that can
+      contain only constants, method signatures, default methods, static
+      methods, and nested types. Interfaces cannot contain instance fields.
+    </p>
+    <p>
+      <strong>Usage:</strong>
+      Interfaces are used to specify a contract of methods that a class must
+      implement. A class implements an interface by providing the implementation
+      of all its methods.
+    </p>
+    <pre><code>interface Animal {
+    void sound(); // Abstract method
+
+    // Default method
+    default void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+class Dog implements Animal {
+    @Override
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.sound();  // Implemented method
+        dog.sleep();  // Default method from interface
+    }
+}</code></pre>
+
+    <h2>Full Code Demonstration</h2>
+    <pre><code>// Default access modifier
 class DefaultClass {
     void display() {
         System.out.println("Default Access Modifier");
@@ -276,64 +314,97 @@ public class AbstractDemo {
         obj.display(); // Calls the implemented method
         obj.show(); // Calls the concrete method
     }
+}
+
+// Interface example
+interface Animal {
+    void sound(); // Abstract method
+
+    // Default method
+    default void sleep() {
+        System.out.println("This animal is sleeping.");
+    }
+}
+
+class Dog implements Animal {
+    @Override
+    public void sound() {
+        System.out.println("Bark");
+    }
+}
+
+public class InterfaceDemo {
+    public static void main(String[] args) {
+        Dog dog = new Dog();
+        dog.sound();  // Implemented method
+        dog.sleep();  // Default method from interface
+    }
 }</code></pre>
 
-		<h2>Output</h2>
-		<pre><code>Default Access Modifier
+    <h2>Output</h2>
+    <pre><code>Default Access Modifier
 Public Access Modifier
 Value: 10
 Private Access Modifier
 Protected Access Modifier
 Implemented abstract method in ConcreteClass.
-This is an abstract class with a concrete method.</code></pre>
+This is an abstract class with a concrete method.
+Bark
+This animal is sleeping.</code></pre>
 
-		<h2>Summary Table</h2>
-		<table>
-			<thead>
-				<tr>
-					<th>Access Modifier</th>
-					<th>Scope</th>
-					<th>Accessible From</th>
-					<th>Usage</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>Default</td>
-					<td>Within the same package</td>
-					<td>Classes, methods, and variables in the same package</td>
-					<td>When no explicit access modifier is needed</td>
-				</tr>
-				<tr>
-					<td>Public</td>
-					<td>Anywhere</td>
-					<td>
-						Classes, methods, and variables globally (within and outside
-						            packages)
-					</td>
-					<td>For widely accessible features</td>
-				</tr>
-				<tr>
-					<td>Private</td>
-					<td>Within the same class</td>
-					<td>Only accessible inside the class where they are defined</td>
-					<td>For data encapsulation and hiding</td>
-				</tr>
-				<tr>
-					<td>Protected</td>
-					<td>Same package and subclasses in different packages</td>
-					<td>
-						Accessible in the same package and in subclasses through inheritance
-					</td>
-					<td>For controlled access with inheritance</td>
-				</tr>
-				<tr>
-					<td>Abstract</td>
-					<td>Defined in abstract classes</td>
-					<td>Accessible through subclasses</td>
-					<td>For creating common base classes with abstract methods</td>
-				</tr>
-			</tbody>
-		</table>
-	</body>
+    <h2>Summary Table</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Access Modifier</th>
+          <th>Scope</th>
+          <th>Accessible From</th>
+          <th>Usage</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Default</td>
+          <td>Within the same package</td>
+          <td>Classes, methods, and variables in the same package</td>
+          <td>When no explicit access modifier is needed</td>
+        </tr>
+        <tr>
+          <td>Public</td>
+          <td>Anywhere</td>
+          <td>
+            Classes, methods, and variables globally (within and outside
+            packages)
+          </td>
+          <td>For widely accessible features</td>
+        </tr>
+        <tr>
+          <td>Private</td>
+          <td>Within the same class</td>
+          <td>Only accessible inside the class where they are defined</td>
+          <td>For data encapsulation and hiding</td>
+        </tr>
+        <tr>
+          <td>Protected</td>
+          <td>Same package and subclasses in different packages</td>
+          <td>
+            Accessible in the same package and in subclasses through inheritance
+          </td>
+          <td>For controlled access with inheritance</td>
+        </tr>
+        <tr>
+          <td>Abstract</td>
+          <td>Defined in abstract classes</td>
+          <td>Accessible through subclasses</td>
+          <td>For creating common base classes with abstract methods</td>
+        </tr>
+        <tr>
+          <td>Interface</td>
+          <td>Defined in interfaces</td>
+          <td>Accessible through implementing classes</td>
+          <td>For defining method contracts that classes must implement</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
 </html>
