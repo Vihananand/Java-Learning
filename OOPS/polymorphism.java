@@ -20,6 +20,6 @@ public class polymorphism {
         Student s1 = new Student();
         s1.name = "Vihan Anand";
         s1.age = 20;
-        s1.printInfo(s1.age);
+        s1.printInfo(s1.name, s1.age);
     }
 }
